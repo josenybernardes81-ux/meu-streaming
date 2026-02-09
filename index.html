@@ -3,38 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Meu Streaming</title>
+
 <style>
-body{background:black;color:white;font-family:Arial;text-align:center;padding-top:50px}
-button{padding:15px;margin:10px;font-size:18px;border-radius:8px}
+body{
+  background:black;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  padding-top:30px;
+}
+
+button{
+  padding:15px;
+  margin:10px;
+  font-size:18px;
+  border-radius:8px;
+}
+
+#player{
+  display:none;
+  margin-top:20px;
+}
 </style>
 </head>
+
 <body>
 
 <h1>🎬 Meu Streaming</h1>
 <p>Área VIP — Assine para assistir</p>
-  <br><br>
-<iframe width="300" height="170"
-src="https://www.youtube.com/embed/TcMBFSGVi1c"
-title="Filme"
-frameborder="0"
-allowfullscreen>
-</iframe>
-<button onclick="assinar()">Assinar VIP</button>
-<button onclick="assistir()">Assistir Filme</button>
+
+<button onclick="assistir()">▶️ Assistir Filme</button>
+
+<div id="player">
+  <iframe width="320" height="180"
+    src="https://www.youtube.com/embed/TcMBFSGVi1c"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
 <script>
-let vip=false;
-
-function assinar(){
-vip=true;
-alert("VIP ativado (simulação)");
-}
-
 function assistir(){
-if(!vip){
-alert("Você precisa assinar");
-return;
-}
-alert("Filme iniciando...");
+  document.getElementById("player").style.display = "block";
 }
 </script>
 
