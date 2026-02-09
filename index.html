@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Meu Streaming</title>
+<style>
+body{background:black;color:white;font-family:Arial;text-align:center;padding-top:50px}
+button{padding:15px;margin:10px;font-size:18px;border-radius:8px}
+</style>
+</head>
+<body>
 
+<h1>🎬 Meu Streaming</h1>
+<p>Área VIP — Assine para assistir</p>
+
+<button onclick="assinar()">Assinar VIP</button>
+<button onclick="assistir()">Assistir Filme</button>
+
+<script>
+let vip=false;
+
+function assinar(){
+vip=true;
+alert("VIP ativado (simulação)");
+}
+
+function assistir(){
+if(!vip){
+alert("Você precisa assinar");
+return;
+}
+alert("Filme iniciando...");
+}
+</script>
+
+</body>
+</html>
