@@ -6,45 +6,86 @@
 
 <style>
 body{
-  background:black;
+  margin:0;
+  background:#111;
   color:white;
   font-family:Arial;
-  text-align:center;
-  padding-top:30px;
 }
 
-button{
+.topo{
+  background:black;
   padding:15px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.banner{
+  padding:20px;
+}
+
+.banner img{
+  width:100%;
+  border-radius:10px;
+}
+
+.catalogo{
+  padding:20px;
+}
+
+.filme{
+  display:inline-block;
   margin:10px;
-  font-size:18px;
+}
+
+.filme img{
+  width:140px;
   border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.filme img:hover{
+  transform:scale(1.1);
 }
 
 #player{
   display:none;
-  margin-top:20px;
+  text-align:center;
+  margin:20px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🎬 Meu Streaming</h1>
-<p>Área VIP — Assine para assistir</p>
+<div class="topo">
+🎬 Meu Streaming
+</div>
 
-<button onclick="assistir()">▶️ Assistir Filme</button>
+<div class="banner">
+<img src="https://i.imgur.com/7b1H0oG.jpeg">
+</div>
+
+<div class="catalogo">
+<h2>🔥 Populares</h2>
+
+<div class="filme">
+<img src="https://i.imgur.com/0rVeh4A.jpeg" onclick="assistir()">
+</div>
+
+</div>
 
 <div id="player">
-  <iframe width="320" height="180"
-    src="https://www.youtube.com/embed/TcMBFSGVi1c"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
+<iframe width="320" height="180"
+src="https://www.youtube.com/embed/TcMBFSGVi1c"
+frameborder="0"
+allowfullscreen>
+</iframe>
 </div>
 
 <script>
 function assistir(){
-  document.getElementById("player").style.display = "block";
+  document.getElementById("player").style.display="block";
 }
 </script>
 
